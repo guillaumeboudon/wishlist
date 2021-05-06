@@ -1,6 +1,11 @@
 require "cuba"
 require "cuba/contrib"
+require "ohm"
 require "mote"
+
+require_relative "env"
+
+Ohm.redis = Redic.new(ENV["REDIS_URL"])
 
 Cuba.plugin Cuba::Mote
 
