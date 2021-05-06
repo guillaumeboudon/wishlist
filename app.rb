@@ -4,6 +4,7 @@ require "ohm"
 require "mote"
 
 require_relative "env"
+Dir["./models/**/*.rb"].sort.each { |f| require(f) }
 
 Ohm.redis = Redic.new(ENV["REDIS_URL"])
 
