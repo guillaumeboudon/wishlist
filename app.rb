@@ -2,6 +2,7 @@ require "cuba"
 require "cuba/contrib"
 require "ohm"
 require "mote"
+require "shield"
 
 require_relative "env"
 Dir["./models/**/*.rb"].sort.each { |f| require(f) }
